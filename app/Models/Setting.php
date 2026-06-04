@@ -10,5 +10,8 @@ class Setting extends Model
     use HasFactory;
 
     // Bu satır 'key' ve 'value' sütunlarına veri yazmamıza izin verir
-    protected $fillable = ['key', 'value'];
-}
+protected $fillable = [
+    'user_id',
+    'key',
+    'value'
+];}

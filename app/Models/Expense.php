@@ -10,5 +10,9 @@ class Expense extends Model
     use HasFactory;
 
     // Bu satır sayesinde masrafları kaydedebileceğiz
-    protected $fillable = ['baslik', 'tutar', 'kategori'];
-}
+protected $fillable = [
+    'user_id',
+    'baslik',
+    'tutar',
+    'kategori'
+];}
