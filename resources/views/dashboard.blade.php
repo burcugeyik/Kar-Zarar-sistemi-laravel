@@ -145,7 +145,7 @@
                                 <tr><th class="ps-4">Tarih</th><th>Açıklama</th><th>Kategori</th><th>Tutar</th></tr>
                             </thead>
                             <tbody>
-                                @foreach(\App\Models\Expense::latest()->take(5)->get() as $gider)
+                                @foreach(\App\Models\Expense::where('user_id', auth()->id())->latest()->take(5)->get() as $gider)
                                 <tr>
                                     <td class="ps-4">{{ $gider->created_at->format('d.m.Y') }}</td>
                                     <td>{{ $gider->baslik }}</td>
